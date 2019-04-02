@@ -9,7 +9,9 @@ language_api_url = text_analytics_base_url + 'languages'
 documents = {'documents': [
     {'id': '1', 'text': 'This is a document written in English.'},
     {'id': '2', 'text': 'Este es un document escrito en Español.'},
-    {'id': '3', 'text': '这是一个用中文写的文件' }
+    {'id': '3', 'text': 'Hey kuna mtumiaji wa python!' },
+    {'id': '4', 'text': 'Привет, пользователь Python!'}
+
 ]}
 headers = {"Ocp-Apim-Subscription-Key": subscription_key}
 response = requests.post(language_api_url, headers=headers, json=documents)
