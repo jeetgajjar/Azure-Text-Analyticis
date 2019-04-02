@@ -2,8 +2,6 @@ import os
 import requests
 from pprint import pprint
 
-
-
 subscription_key = os.getenv('AZURE_SUBSCRIPTION_KEY')
 text_analytics_base_url = "https://westcentralus.api.cognitive.microsoft.com/text/analytics/v2.0/"
 language_api_url = text_analytics_base_url + 'languages'
