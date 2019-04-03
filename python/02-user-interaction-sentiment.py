@@ -29,8 +29,8 @@ def get_sentiment(input):
 
 
 while True:
-    sentiment = input("Give me your sentiment! \n")
-    if sentiment == "":
+    user_input = input("Give me your sentiment! \n")
+    if user_input == "":
         break
     else:
-        print(get_sentiment(sentiment))
+        print(get_sentiment(user_input))
