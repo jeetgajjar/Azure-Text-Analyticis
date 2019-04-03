@@ -3,13 +3,13 @@ import requests
 from pprint import pprint
 
 
-def get_sentiment(sentiment):
+def get_sentiment(input):
     subscription_key = os.getenv('AZURE_SUBSCRIPTION_KEY')
     text_analytics_base_url = "https://westcentralus.api.cognitive.microsoft.com/text/analytics/v2.0/"
     sentiment_api_url = text_analytics_base_url + "sentiment"
     documents = {'documents': [
         {'id': '1', 'language': 'en',
-         'text': sentiment}
+         'text': input}
     ]}
     headers = {"Ocp-Apim-Subscription-Key": subscription_key}
     response = requests.post(sentiment_api_url, headers=headers, json=documents)
